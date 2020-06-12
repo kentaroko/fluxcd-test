@@ -8,6 +8,7 @@ metadata:
     repository.fluxcd.io/nginx: nginx.image.img
     tag.fluxcd.io/nginx: nginx.image.tag
     filter.fluxcd.io/nginx: regex:^1.1.*
+    fluxcd.io/automated: 'true'
 spec:
   releaseName: cicd-test
   chart:
