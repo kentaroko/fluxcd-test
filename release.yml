@@ -1,0 +1,13 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: cicd-test
+  namespace: default
+spec:
+  releaseName: cicd-test
+  chart:
+    git: git@github.com:hwchiu/hiskio-course
+    ref: master
+    path: cicd/application/helm
+  values:
+    replicaCount: 1
