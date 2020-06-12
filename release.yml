@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: cicd-test
   namespace: default
+  annotations:
+    filter.fluxcd.io/nginx: semver:~1.1
 spec:
   releaseName: cicd-test
   chart:
@@ -11,3 +13,6 @@ spec:
     path: cicd/application/helm
   values:
     replicaCount: 1
+    nginx:
+      image:
+        tag: v1.1.9-staging
