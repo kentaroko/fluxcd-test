@@ -5,6 +5,8 @@ metadata:
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
+    repository.fluxcd.io/nginx: nginx.image.img
+    tag.fluxcd.io/nginx: nginx.image.tag
     filter.fluxcd.io/nginx: regex:^1.1.*
 spec:
   releaseName: cicd-test
@@ -15,4 +17,5 @@ spec:
   values:
     nginx:
       image:
+        img: hwchiu/cicd-app
         tag: v1.1.9-staging
