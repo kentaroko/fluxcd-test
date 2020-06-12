@@ -19,4 +19,4 @@ spec:
     nginx:
       image:
         img: hwchiu/cicd-app
-        tag: 1.1.22-staging
+        tag: 1.1.19-staging
