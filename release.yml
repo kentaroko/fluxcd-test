@@ -7,16 +7,16 @@ metadata:
   annotations:
     repository.fluxcd.io/nginx: nginx.image.img
     tag.fluxcd.io/nginx: nginx.image.tag
-    filter.fluxcd.io/nginx: regex:^1.1.*
+    filter.fluxcd.io/nginx: semver:~2
     fluxcd.io/automated: 'true'
 spec:
   releaseName: cicd-test
   chart:
     git: git@github.com:hwchiu/hiskio-course
-    ref: master
+    ref: sealed
     path: cicd/application/helm
   values:
     nginx:
       image:
         img: hwchiu/cicd-app
-        tag: 1.1.100-staging
+        tag: 2.1.0
