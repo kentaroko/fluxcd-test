@@ -19,4 +19,4 @@ spec:
     nginx:
       image:
         img: hwchiu/cicd-app
-        tag: 2.1.5
+        tag: 2.1.7
