@@ -19,4 +19,4 @@ spec:
     nginx:
       image:
         img: newfishg/cicd-app
-        tag: 1.1.100-staging
+        tag: 1.1.40
