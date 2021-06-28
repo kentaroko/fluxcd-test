@@ -12,11 +12,11 @@ metadata:
 spec:
   releaseName: cicd-test
   chart:
-    git: git@github.com:hwchiu/hiskio-course
+    git: git@github.com:kentaroko/hiskio-course
     ref: master
     path: cicd/application/helm
   values:
     nginx:
       image:
-        img: hwchiu/cicd-app
+        img: newfishg/cicd-app
         tag: 1.1.100-staging
